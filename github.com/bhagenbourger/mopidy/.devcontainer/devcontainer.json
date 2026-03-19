@@ -1,0 +1,21 @@
+{
+  "name": "Mopidy Dev Container",
+  "build": {
+    "dockerfile": "docker/Dockerfile"
+  },
+  "remoteUser": "vscode",
+  "forwardPorts": [6600, 6680, 8888],
+  "mounts": [
+    "source=${localEnv:HOME}/Music,target=/home/vscode/music/,type=bind,consistency=cached"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.debugpy",
+        "ms-python.vscode-python-envs",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  }
+}
