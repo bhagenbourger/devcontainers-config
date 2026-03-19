@@ -1,0 +1,42 @@
+{
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    },
+    "files.autoSave": "afterDelay",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.multiCursorModifier": "ctrlCmd",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.fontLigatures.enabled": true,
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "continue.enableTabAutocomplete": false,
+    "redhat.telemetry.enabled": false,
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+    "python.analysis.typeCheckingMode": "strict",
+    "jdk.telemetry.enabled": false,
+    "remote.autoForwardPortsSource": "hybrid",
+    "dotfiles.repository": "https://github.com/bhagenbourger/devcontainers-config",
+    "dotfiles.installCommand": "dotfiles/install.sh",
+    "dev.containers.defaultFeatures": {
+        "ghcr.io/devcontainers/features/common-utils:2.5.6": {
+            "installZsh": true,
+            "installOhMyZsh": true,
+            "installOhMyZshConfig": true,
+            "configureZshAsDefaultShell": true,
+            "username": "vscode"
+        },
+        "ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
+            "plugins": "zsh-autosuggestions zsh-syntax-highlighting",
+            "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions.git https://github.com/zsh-users/zsh-syntax-highlighting.git"
+        },
+        "ghcr.io/devcontainers-extra/features/apt-get-packages:1": {
+            "packages": ["tig", "vim", "nodejs", "npm"]
+        }
+    },
+    "dev.containers.defaultExtensions": [
+        "github.copilot-chat"
+    ]
+}
