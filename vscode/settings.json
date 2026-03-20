@@ -19,7 +19,7 @@
     "jdk.telemetry.enabled": false,
     "remote.autoForwardPortsSource": "hybrid",
     "dotfiles.repository": "https://github.com/bhagenbourger/devcontainers-config",
-    "dotfiles.installCommand": "dotfiles/install.sh",
+    "dotfiles.installCommand": "install.sh",
     "dev.containers.defaultFeatures": {
         "ghcr.io/devcontainers/features/common-utils:2.5.6": {
             "installZsh": true,

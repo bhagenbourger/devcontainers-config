@@ -3,7 +3,7 @@
 ##################################################
 # Get the directory where this script is located
 ##################################################
-DOTFILES_DIR=$(cd "$(dirname "$0")" && pwd)
+DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)/dotfiles"
 
 ##################################################
 # Install P10k theme if it doesn't exist
@@ -20,11 +20,11 @@ if [ ! -d "${HOME}/powerlevel10k" ]; then
 fi
 
 ##################################################
-# Symbolically link files to the home directory
+# Copy files to the home directory
 ##################################################
-ln -sf "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
-ln -sf "$DOTFILES_DIR/.p10k.zsh" "$HOME/.p10k.zsh"
-ln -sf "$DOTFILES_DIR/.gitignore_global" "$HOME/.gitignore_global"
+cp "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
+cp "$DOTFILES_DIR/.p10k.zsh" "$HOME/.p10k.zsh"
+cp "$DOTFILES_DIR/.gitignore_global" "$HOME/.gitignore_global"
 
 ##################################################
 # Gemini CLI

@@ -6,8 +6,10 @@
   "remoteUser": "vscode",
   "forwardPorts": [6600, 6680, 8888],
   "mounts": [
-    "source=${localEnv:HOME}/Music,target=/home/vscode/music/,type=bind,consistency=cached"
+    "source=${localEnv:HOME}/Music,target=/home/vscode/music/,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/.devcontainer_config/mopidy/mopidy.conf,target=/home/vscode/.config/mopidy/mopidy.conf,type=bind,consistency=cached"
   ],
+  "postCreateCommand": ".devcontainer_config/scripts/post-create.sh",
   "customizations": {
     "vscode": {
       "extensions": [
